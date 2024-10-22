@@ -1,0 +1,1 @@
+console.log('Inicializando script2.ts');
