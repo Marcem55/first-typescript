@@ -110,4 +110,30 @@ function sendResume(dev: Developer2): void {
 
 sendResume(dev)
 
+//* CLASSES
 
+class Movie {
+    title: string;
+    actors?: string[];
+    genre?: string;
+
+    constructor(title: string, actors: string[], genre: string) {
+        this.title = title;
+        this.actors = actors;
+        this.genre = genre;
+    }
+
+    projectOnCinema(): void {
+        console.log(`Screening ${this.title} on the cinema`);
+    }
+}
+
+const movie = new Movie('Fast and Furious 9', ['Vin Diesel', 'John Cena'], 'Action');
+
+console.log(movie);
+movie.projectOnCinema()
+
+const movie2 = new Movie('Oppenheimer', ['Cillian Murphy', 'Emily Blunt'], 'Drama');
+
+console.log(movie2);
+movie2.projectOnCinema()

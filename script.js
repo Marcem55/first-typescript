@@ -78,3 +78,20 @@ function sendResume(dev) {
     }
 }
 sendResume(dev);
+//* CLASSES
+class Movie {
+    constructor(title, actors, genre) {
+        this.title = title;
+        this.actors = actors;
+        this.genre = genre;
+    }
+    projectOnCinema() {
+        console.log(`Screening ${this.title} on the cinema`);
+    }
+}
+const movie = new Movie('Fast and Furious 9', ['Vin Diesel', 'John Cena'], 'Action');
+console.log(movie);
+movie.projectOnCinema();
+const movie2 = new Movie('Oppenheimer', ['Cillian Murphy', 'Emily Blunt'], 'Drama');
+console.log(movie2);
+movie2.projectOnCinema();
