@@ -95,3 +95,21 @@ movie.projectOnCinema();
 const movie2 = new Movie('Oppenheimer', ['Cillian Murphy', 'Emily Blunt'], 'Drama');
 console.log(movie2);
 movie2.projectOnCinema();
+//* ENCAPSULATION, GENERICS AND GETTERS/SETTERS
+class Ruffle {
+    constructor(name) {
+        this.name = name;
+    }
+    setTicket(ticket) {
+        this.ticket = ticket;
+    }
+    getTicket() {
+        return this.ticket;
+    }
+    draw() {
+        return `To ${this.name}, the ticket is ${this.ticket}`;
+    }
+}
+let ruffle = new Ruffle('Marce Malacalza');
+ruffle.setTicket('ABC567');
+console.log(ruffle.draw());
