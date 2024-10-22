@@ -8,13 +8,16 @@ const Task = ({task, onDeleteTask, onEditTask}: TaskProps) => {
   return (
     <div className="task">
         <span>{task}</span>
-        <button onClick={onDeleteTask}>Delete</button>
-        <button onClick={() => {
+        <div className="btns">
+
+        <button className="edit-btn" onClick={() => {
             const newTask = prompt('Enter new task:', task)
             if (newTask) {
                 onEditTask(newTask)
             }
         }}>Edit</button>
+        <button onClick={onDeleteTask}>Delete</button>
+        </div>
     </div>
   )
 }

@@ -25,7 +25,7 @@ const TodoApp = () => {
   return (
     <div>
         <h1>To do List</h1>
-        <div>
+        <div className="flex">
             <input type="text"
             placeholder="New task"
             value={task}
