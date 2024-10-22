@@ -1,3 +1,5 @@
+//* PRIMITIVE TYPES
+
 let studiedJavascript: boolean = true;
 
 if(studiedJavascript){
@@ -33,3 +35,79 @@ console.log(disney);
 
 disney = true;
 console.log(disney);
+
+//* ARRAYS
+
+let strArr: string[] = ['HTML, CSS, JS, TS'];
+
+let numArr: number[] = [1, 2, 3, 4, 5];
+
+//* LITERAL OBJECTS
+
+let programmer = {
+    name: 'Marce Malacalza',
+    age: 26,
+    technologies: ['HTML', 'CSS', 'JS', 'TS'],
+    drinksMate: true
+}
+
+programmer = {
+    name: 'Pepe Grillo',
+    age: 30,
+    technologies: ['C++', 'React', 'SQL', 'Node'],
+    drinksMate: false
+}
+
+//* TYPES
+
+type Developer = {
+    name: string;
+    age: number;
+    technologies: string[];
+    drinksMate?: boolean | null;
+}
+
+let developer: Developer = {
+    name: 'Marce Malacalza',
+    age: 26,
+    technologies: ['HTML', 'CSS', 'JS', 'TS'],
+    drinksMate: true
+}
+
+let developer2: Developer = {
+    name: 'Pepe Grillo',
+    age: 30,
+    technologies: ['C++', 'React', 'SQL', 'Node'],
+    drinksMate: null
+}
+
+//* INTERFACES
+
+interface Developer2 {
+    name: string;
+    age: number;
+    technologies: string[];
+    drinksMate?: boolean | null;
+}
+
+let dev: Developer2 = {
+    name: 'Marcelinho Malacalza',
+    age: 26,
+    technologies: ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'React'],
+    drinksMate: true
+}
+
+function sendResume(dev: Developer2): void {
+    console.log(`Hello, my name is ${dev.name}, I am ${dev.age} years old and I know how to use the following technologies: ${dev.technologies.join(', ')}`);
+    if(dev.drinksMate !== null) {
+        if(dev.drinksMate) {
+            console.log('I drink mate');
+        } else {
+            console.log('I do not drink mate');
+        }
+    }
+}
+
+sendResume(dev)
+
+

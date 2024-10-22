@@ -1,4 +1,5 @@
 "use strict";
+//* PRIMITIVE TYPES
 let studiedJavascript = true;
 if (studiedJavascript) {
     console.log("You can still learn more about Typescript");
@@ -31,3 +32,49 @@ disney = 15000000000;
 console.log(disney);
 disney = true;
 console.log(disney);
+//* ARRAYS
+let strArr = ['HTML, CSS, JS, TS'];
+let numArr = [1, 2, 3, 4, 5];
+//* LITERAL OBJECTS
+let programmer = {
+    name: 'Marce Malacalza',
+    age: 26,
+    technologies: ['HTML', 'CSS', 'JS', 'TS'],
+    drinksMate: true
+};
+programmer = {
+    name: 'Pepe Grillo',
+    age: 30,
+    technologies: ['C++', 'React', 'SQL', 'Node'],
+    drinksMate: false
+};
+let developer = {
+    name: 'Marce Malacalza',
+    age: 26,
+    technologies: ['HTML', 'CSS', 'JS', 'TS'],
+    drinksMate: true
+};
+let developer2 = {
+    name: 'Pepe Grillo',
+    age: 30,
+    technologies: ['C++', 'React', 'SQL', 'Node'],
+    drinksMate: null
+};
+let dev = {
+    name: 'Marcelinho Malacalza',
+    age: 26,
+    technologies: ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'React'],
+    drinksMate: true
+};
+function sendResume(dev) {
+    console.log(`Hello, my name is ${dev.name}, I am ${dev.age} years old and I know how to use the following technologies: ${dev.technologies.join(', ')}`);
+    if (dev.drinksMate !== null) {
+        if (dev.drinksMate) {
+            console.log('I drink mate');
+        }
+        else {
+            console.log('I do not drink mate');
+        }
+    }
+}
+sendResume(dev);
